@@ -52,7 +52,7 @@ You may notice when testing on your computer, the order of attributes doesn't ch
 ## Known Limitations & Future Improvements
 
 * Randomization is currently only done with equal weights
-* The code currently does not account for restrictions among attribute levels (for example if you wanted to prevent an immigrant profile from having occupation = doctor and education level = none).
+* The code currently does account for simple restrictions among attribute levels 
 * There is not currently a mechanism of having qualtrics record the order of the attributes that is presented to each respondent, but since the order of attributes is randomized across respondents the order of presentation should not matter.
 * Assumes you have two alternatives from which respondents are supposed to select
 * Does not automatically produce Qualtrics embedded variables.
