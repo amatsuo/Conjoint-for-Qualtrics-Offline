@@ -22,6 +22,14 @@
   var attribute_array = ['Religion', 'Tribe', 'Party', 'Actions-public', 'Actions-private', 'Promises'];
   // Replace values of array with attribute values
   var values_array = [['Christian', 'Muslim'], ['Sukuma', 'Chagga'], ['CCM', 'Opposition'], ['Gave nothing to your community', 'Gave money to your community'], ['Gave you nothing', 'Gave you money'], ['Has promises but no plan', 'Has promises and a plan']];
+  // Set the constraints if there are.
+  // Each constraint is deflined as an associative array like:
+  // {"Attribute1":"level1", "Attribute2":"level2" }
+  // In this example, combination of "Christian"-"Opposition" or 
+  // 'Gave nothing to your community'-'Gave you nothing' does not show up
+  var constraints = [{'Religion':'Christian', 'Party':'Opposition'},
+                     {'Actions-public':'Gave nothing to your community',
+                      'Actions-private':'Gave you nothing'} ];
   
   if (attribute_array.length !== values_array.length) {
     alert("Your attributes array and values array do not match.");
